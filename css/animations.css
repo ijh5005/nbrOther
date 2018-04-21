@@ -1,0 +1,93 @@
+body {
+  transition: opacity 0.8s;
+}
+
+#topBar,
+#homePage,
+#musicPage,
+#aboutPage,
+#artistPage,
+#staffPage,
+#servicesPageRightSide,
+#contactPageLeftSide {
+  transition: opacity 0.5s;
+}
+
+.featuredArtist {
+  transition: left 1s;
+}
+
+#homePageLargeTextP,
+#migh p,
+#ty p {
+  transition: opacity 0.5s, left 1s;
+}
+
+#aboutScreen {
+  transition: top 1s;
+}
+
+#staffPageTopBottom {
+  transition: top 0.5s;
+}
+
+#aboutImg {
+  transition: right 0.5s;
+}
+
+#leftArtistImg {
+  transition: left 0.5s;
+}
+
+#rightArtistImg {
+  transition: left 0.5s;
+}
+
+.transitioning {
+  opacity: 0;
+  transition: opacity 0s;
+}
+
+.fade {
+  opacity: 0;transition: opacity 0.5s;
+}
+
+.fadeLeft {
+  position: relative;transition: opacity 0.5s, left 1s;opacity: 0;left: 100%;
+}
+
+.fadeRight {
+  transition: opacity 0.5s, left 0.5s;opacity: 0;left: -4em;
+}
+
+.left {
+  left: -40em;transition: left 0.5s;
+}
+
+.top {
+  top: -20rem;
+  transition: top 1s;
+}
+
+.topStaffPage {
+  top: 10em;
+}
+
+.right {
+  right: -40em;transition: right 0.5s;
+}
+
+.artistLeft {
+  left: -10em;position: relative;
+  transition: left 0.5s;
+}
+
+.artistRight {
+  left: 10em;position: relative;
+  transition: left 0.5s;
+}
+
+.staffDescription:hover {
+  color: #fff;
+  background-color: #870012;
+}

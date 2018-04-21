@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>No Baggage Records, LLC</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/sliderComponent.css">
+    <link rel="stylesheet" href="./css/library.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <!-- <link rel="stylesheet" href="./css/mediaquery.css"> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  </head>
+  <body ng-app='app' ng-controller='ctrl' ng-cloak>
+
+    <!-- CONTAINER -->
+    <div id="container" class="">
+
+      <!-- NAVIGATION -->
+      <div id="topBar" class="flexRow fullWidth">
+        <img ng-hide='hideLogo' src="./img/logoText.png" alt="" class="h70">
+        <div id="logo" class="fullHeight"></div>
+        <div id="navigation" class="flexRow fullHeight none">
+          <p data={{$index}} class="pointer navigationOption" ng-click='navigateTo(navigationOption.name.toLowerCase())' ng-repeat='navigationOption in navigationOptions track by $index'>{{navigationOption.name}}</p>
+        </div>
+      </div>
+
+      <!-- HOME PAGE -->
+      <div id="homePage" class="fullWidth flexRow webPage fade" style={{homePageStyle}}>
+        <!-- <div id="homeLargeText" class="fullSize"> -->
+          <!-- <p id="homePageLargeTextP" class="homePageLargeTextP fullWidth" style={{homePageLargeTextPStyle}}><span style="color: #fff">MIGH</span>TY</p> -->
+        <!-- </div> -->
+        <div id="homePageRightSide" class="fullHeight flexCol">
+          <!-- <div id="homeIntro" class="h35 fullWidth flexRow">
+            <div id="homeIntroImg" class="flexCol fullHeight">
+              <img class="h90" src="./img/artistFeature/bossLady.png" alt="">
+              <p>Telissa K. Lindsey, Owner and CEO</p>
+            </div>
+            <div class="flexCol fullHeight w60">
+              <p id="mission">"My goal is simple..to make good music with good people"</p>
+            </div>
+          </div> -->
+          <div id="featuredArtist" class="h90 featuredArtist" style={{featuredArtistStyle}}>
+            <div id="featuredArtistImg" class="fullWidth">
+              <img class="fullHeight" src={{featureImg}} alt="">
+            </div>
+            <div id="migh" class="MIGH flexRow fullHeight fullWidth">
+              <p style={{homePageLargeTextPStyle}}>NBR</p>
+            </div>
+          </div>
+        </div>
+        <div id="playlist" class="flexCol fullHeight">
+          <div id="ty" class="flexRow fullHeight fullWidth">
+            <!-- <p style={{homePageLargeTextPStyle}}>TY</p> -->
+          </div>
+          <div id="playlistHolder" class="">
+            <div id="audioPlayer" class="">
+              <div id="playBtnHolder" class="flexRow fullHeight">
+                <div id="playBtnOutterCircle" class="fullSize"></div>
+                <div id="playBtnInnerCircle" class="w70 h70"></div>
+                <i id="sound" class="fas fa-volume-up"></i>
+                <div id="playBtn" ng-click='toggleMusic()' ng-if='playMusic === false' class="playBtn flexRow w55 h55">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div ng-click='toggleMusic()' ng-if='playMusic === true' class="playBtn flexRow w55 h55">
+                  <i class="fas fa-pause"></i>
+                </div>
+              </div>
+              <div id="playBar" class=""></div>
+            </div>
+            <div class="itunesLogo flexRow">
+              <!-- <i class="fab fa-itunes"></i> -->
+              <i class="fas fa-headphones"></i>
+            </div>
+            <div id="playlistSectionHolder" class="">
+              <div id="playlistSection" class="flexCol">
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p data={{$index}} ng-click='playSong($index)' class="track pointer" ng-repeat='playListSong in playList track by $index'>{{playListSong.track}}</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end: HOME PAGE -->
+
+      <!-- ABOUT PAGE -->
+      <div id="aboutPage" class="flexRow fullWidth webPage" style={{aboutPageStyle}}>
+        <div id="aboutPageBackLayer" class="fullWidth h90">
+          <div id="aboutScreen" class="aboutScreen flexRow h90 w80" style={{aboutScreenStyle}}>
+            <div id="aboutScreenText" class="flexCol">
+              <!-- <div id="aboutLogoBox" class="w30 h30"></div> -->
+              <p id="aboutP" class="w40">It is the mission of No Baggage Records, LLC to provide personalized consulting services and innovative career guidance for both established and developing artists to assist them with cultivating the highest possible level of accomplishment in the ever-evolving music, film and entertainment industries.</p>
+              <p>Check bags at the door and fly with us</p>
+            </div>
+          </div>
+          <div id="aboutImg" class="aboutImg" style={{aboutImgStyle}}></div>
+        </div>
+      </div>
+
+      <!-- ARTIST PAGE -->
+      <div id="artistPage" class="flexCol fullWidth webPage" style={{artistPageStyle}}>
+        <div id="artistSlideShowSection" class="h70 fullWidth">
+          <div id="slideShowContainer" class="fullHeight">
+            <div id="artistImg" data={{$index}} class="slideItems h60 flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'><p ng-if='currentArtistIndex === $index'>{{artist.name}}</p></div>
+          </div>
+        </div>
+        <div id="artistBottom" class="flexCol h30 fullWidth">
+          <div class="slideShowSelectorContainer flexRow fullWidth h40">
+            <div class="slideShowSelector flexRow fullHeight">
+              <div data={{$index}} class="slideSelector flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'>{{artist.sign || artist.name}}</div>
+            </div>
+          </div>
+          <div id="artistBioSection" class="flexCol h60 fullWidth">
+            <p id="artistBioSectionName">{{currentArtist.name}}</p>
+            <p id="artistBioP" class="w50">{{currentArtist.bio}}</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SERVICES PAGE -->
+      <div id="servicesPage" class="flexRow fullWidth webPage" style={{servicesPageStyle}}>
+        <div id="servicesPageLeftSide" style={{servicesPageLeftSideStyle}} class="servicesPageLeftSide flexCol fullHeight w50">
+          <!-- <img class="pageLogo" src="./img/justLogo.png" alt=""> -->
+          <div id="aboutLogoBox" class="w30 h30"></div>
+          <p class="w70">We provide customized professional consulting services to our clients in a wide range of music and entertainment disciplines, including but not limited to artist development, strategic marketing, promotion, songwriting, composing, recording, intellectual property, publishing, distribution and merchandising.</p>
+          <p class="w70">We educate our clients and ensure they have the tools necessary to protect their interest and assist them with meeting the career challenges and opportunities that  they will encounter on the road to success.</p>
+          <p class="w70">No Baggage Records, LLC also provides solutions for corporations and brands looking for successful music integration and activation designed to make their products more accessible and relevant.</p>
+        </div>
+        <div id="servicesPageRightSide" style={{servicesPageRightSideStyle}} class="flexCol fullHeight w50">
+          <p class="heading">Services</p>
+          <p ng-repeat='service in services track by $index' class="list">{{service}}</p>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contactPage" class="flexRow fullWidth webPage" style={{contactPageStyle}}>
+        <div id="contactPageLeftSide" style={{contactPageLeftSideStyle}} class="flexCol fullHeight w50">
+          <p class="heading">Contact Us</p>
+          <p class="list w70">For more information on session pricing for our South Jersey Music Studio, music consultation, original instrumentals and beats, mixing and mastering sessions, listening sessions, and all other inquiries, please email us using the form to the right.</p>
+        </div>
+        <div id="contactPageRightSide" style={{contactPageRightSideStyle}} class="flexCol fullHeight w50 contactPageRightSide">
+          <div class="flexRow fullWidth">
+            <a class="flexRow" href="https://www.google.com/maps/place/4+E+Stow+Rd,+Marlton,+NJ+08053/@39.9158969,-74.9419543,15.27z/data=!4m5!3m4!1s0x89c134f220ca81d5:0x8dad7f4ee21414b7!8m2!3d39.9137356!4d-74.9309081" target="_blank">
+              <img class="w70" src="./img/screenshot.png" alt="">
+            </a>
+          </div>
+          <p class="w70">
+            Contact info:</br>
+            4 Stow Rd.</br>
+            Marlton, NJ 08053 Suite 4</br>
+            856-334-8989</br>
+            Email: NBRecordsLLC@gmail.com</br>
+          </p>
+          <div id="socialmedia" class="flexRow">
+            <div class="w50">
+              <p id="buildat">built by <a href="http://letsbuildyourwebsite.com/" target="_blank">lets<span>build</span>your<span>website</span>.com</a></p>
+            </div>
+            <div class="socialmedia flexRow w50">
+              <a href="https://www.instagram.com/mightyworksmedia/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/MightyWkMedia" target="_blank"><i class="fab fa-twitter-square"></i></a>
+              <a href="https://www.facebook.com/MightyWk/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+          <p id="copywrite">&copy; 2017 by No Baggage Records, LLC</p>
+        </div>
+      </div>
+
+      <!-- STAFF PAGE -->
+      <div id="staffPage" class="flexCol webPage fullWidth">
+
+        <div id="staffPageBottom" class="flexRow h85 w80">
+
+          <div id="staffPageLeftSide" class="fullHeight">
+
+            <div id="staffPageTitle" class="flexRow">
+              <p>NBR Family</p>
+            </div>
+
+            <div id="staffPageSection" class=""  ng-click='' ng-repeat='staffMemberObj in staff track by $index'>
+              <div id="staffPageSectionName" class="fullWidth">
+                <p>{{staffMemberObj.section.friendlyName}}</p>
+              </div>
+              <div id="" class="staffDescription fullWidth flexRow" ng-repeat='staffMember in staffMemberObj.section.people track by $index'>
+                <div class="">
+                  <p>{{staffMember.name}}</p>
+                </div>
+                <div class="">
+                  <p>{{staffMember.description}}</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="staffPageRightSide" class="flexRow fullHeight w50">
+            <div id="staffPageImg" class="h80">
+              <p>Coming Soon…</p>
+              <img class="fullHeight" src={{staffImg}} alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div> <!-- end: CONTAINER -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    <style media="screen">
+
+      .playBtn::before {
+        position: absolute;
+        content: '';
+        background-color: #fff;
+        height: 0.08em;
+        transition: width 0.6s;
+        left: 100%;
+        top: 50%;
+        width: {{playingBarWidth}};
+      }
+
+    </style>
+
+  </body>
+</html>

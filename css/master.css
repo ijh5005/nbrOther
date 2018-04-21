@@ -1,0 +1,618 @@
+body {
+  color: var(--darkRed);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+:root {
+  --darkRed: #5B000C;
+  --mediumBlue: #0F4368;
+  --playBtn: #BCDEF5;
+}
+
+.webPage {
+  height: 92vh;
+}
+
+/* <!-- CONTAINER --> */
+#container {
+  color: #8C2C25;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* <!-- NAVIGATION --> */
+#topBar {
+  height: 8vh;
+  justify-content: flex-start;
+  position: relative;
+}
+
+#logo {
+  position: relative;
+  top: -0.6em;
+  width: 40%;
+}
+
+#topBar img {
+  height: 4em;
+  left: 16em;
+  /* opacity: 0.4; */
+  position: absolute;
+  top: 4em;
+  transform: scale(2);
+  z-index: 100;
+}
+
+#navigation {
+  position: relative;
+  top: -0.4em;
+  width: 50%;
+  z-index: 10;
+}
+
+#navigation p {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0 2em;
+  color: #000;
+}
+
+#navigation p.active {
+  background-color: #870012;
+  padding: 0.2em 1.2em;
+  color: #fff;
+}
+
+/* <!-- HOME PAGE --> */
+#homePage {
+  align-items: flex-end;
+}
+
+#homePage,
+#musicPage {
+  position: relative;
+  width: 100vw;
+}
+
+/* #homeLargeText { */
+  /* left: 0; */
+  /* position: absolute;
+  top: 0;
+  z-index: 1;
+} */
+
+#homePageLargeTextP {
+  color: var(--darkRed);
+  font-size: 22em;
+  opacity: 0.2;
+  position: relative;
+  text-align: center;
+  top: -0.32em;
+  width: 100%;
+}
+
+.homePageLargeTextP {
+  left: 0.64em;
+}
+
+#homePageRightSide {
+  justify-content: flex-end;
+}
+
+#homeIntro {
+  align-items: flex-start;
+}
+
+#homeIntroImg {
+  margin: 0 1em;
+}
+
+#homeIntroImg img {
+  border-radius: 40%;
+}
+
+#homeIntroImg p {
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+#homeIntro > div > p#mission {
+  font-weight: 400;
+  font-size: 1.4em;
+  color: #000;
+}
+
+#homeIntro > p {
+  width: 30em;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+#featuredArtist {
+  width: 76vw;
+  position: relative;
+}
+
+.featuredArtist {
+  left: 0;
+}
+
+#featuredArtistImg {
+  /* background-color: var(--darkRed); */
+  background: radial-gradient(#D1001B, #870012);
+  height: 96%;
+  overflow: hidden;
+}
+
+#featuredArtistImg img {
+  left: 20%;
+  position: relative;
+}
+
+#migh,
+#ty {
+  top: 0;
+  font-size: 22em;
+  position: absolute;
+  justify-content: flex-end;
+  perspective: 8em;
+}
+
+#ty {
+  left: 0;
+  justify-content: flex-start;
+}
+
+#migh p,
+#ty p  {
+  position: relative;
+  top: -3px;
+  left: 0.07em;
+  color: #000;
+  transform: rotateY(-45deg);
+  font-style: italic;
+}
+
+#ty p {
+  color: var(--darkRed);
+}
+
+#playlist {
+  width: 24vw;
+  z-index: 2;
+  position: relative;
+}
+
+#playlistHolder {
+  height: 80%;
+  position: relative;
+}
+
+#audioPlayer {
+  height: 20em;
+  left: -50em;
+  position: absolute;
+  width: 50em;
+  z-index: 4;
+}
+
+#playBtnHolder {
+  height: 16em;
+  left: -5em;
+  position: relative;
+  top: 17em;
+  width: 16em;
+}
+
+#playBtnOutterCircle {
+  background-color: var(--darkRed);
+  border-radius: 50%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+}
+
+#playBtnInnerCircle {
+  background-color: var(--playBtn);
+  border-radius: 50%;
+  opacity: 0.05;
+  position: absolute;
+}
+
+#sound {
+  font-size: 1.2em;
+  left: 39.8em;
+  opacity: 0.2;
+  position: absolute;
+  top: 6.28em;
+}
+
+.playBtn {
+  background-color: var(--darkRed);
+  border-radius: 50%;
+  font-size: 4em;
+  position: absolute;
+}
+
+.playBtn::after {
+  background-color: #000;
+  content: '';
+  height: 0.08em;
+  left: 100%;
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  width: 8.8em;
+}
+
+.playBtn > * {
+  color: #fff;
+  opacity: 0.4;
+}
+
+#playBar {
+  background-color: #ccc;
+  height: 0.02em;
+}
+
+.itunesLogo {
+  font-size: 8em;
+  left: -0.4em;
+  top: -0.6em;
+  position: relative;
+  opacity: 0.4;
+}
+
+#playlistSectionHolder {
+  -moz-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
+  -webkit-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
+  box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
+  height: 44em;
+  left: -5em;
+  overflow: scroll;
+  position: absolute;
+  top: 4em;
+  width: 14em;
+  z-index: 4;
+}
+
+#playlistSection {
+
+}
+
+#nowPlaying {
+  background-color: var(--darkRed);
+  color: #fff;
+  font-size: 1.6em;
+  margin: 0;
+  opacity: 0.8;
+  padding: 0.4em;
+  position: absolute;
+  top: 48.4%;
+  width: 18em;
+  z-index: 2;
+}
+
+.track {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 1.2em 0;
+  position: relative;
+  text-align: center;
+}
+
+.selectedSong {
+  background-color: var(--darkRed);
+  border: 0.2em solid var(--darkRed);
+  border-bottom-width: 0.4em;
+  border-radius: 0.2em;
+  border-top-width: 0;
+  color: #fff;
+  padding: 0 0.2em;
+  position: relative;
+}
+
+/* <!-- ABOUT PAGE --> */
+#aboutPage {
+  position: relative;
+}
+
+#aboutPageBackLayer {
+  background: radial-gradient(#D1001B, #870012);
+}
+
+#aboutScreen {
+  background-color: #fff;
+  position: relative;
+}
+
+.aboutScreen {
+  top: -8%;
+}
+
+#aboutScreenText {
+  height: 60em;
+  left: -4em;
+  position: relative;
+  width: 60em;
+}
+
+#aboutLogoBox {
+  background-image: url('../img/logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#aboutP {
+  font-size: 1.4em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#aboutImg {
+  background-color: #bbb;
+  background-image: url('../img/studio2.jpg');
+  background-size: cover;
+  bottom: 0;
+  height: 46em;
+  position: absolute;
+  width: 46em;
+}
+
+.aboutImg {
+  right: 0;
+}
+
+/* <!-- ARTIST PAGE --> */
+#artistPage {
+
+}
+
+#artistSlideShowSection {
+  align-items: flex-end;
+  position: relative;
+}
+
+#artistImg {
+  color: #222;
+  font-weight: 700;
+}
+
+#artistImg p {
+  position: absolute;
+  top: -20%;
+  color: var(--darkRed);
+  font-size: 2em;
+}
+
+.artistSection {
+  display: inline-block;
+}
+
+.artistSectionPadding {
+  background-color: #eee;
+}
+
+#artistCircleHolder {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+}
+
+#artistBottom {
+  background: radial-gradient(#990014, #870012);
+}
+
+.artistSideNameLeft,
+.artistSideNameRight {
+  opacity: 0.6;
+  position: relative;
+  top: -6em;
+}
+
+.artistSideNameRight {
+  left: -4.4em;
+}
+
+.artistSideNameLeft {
+  left: 4.4em;
+}
+
+#artistBioSection {
+  color: #fff;
+  font-weight: 100;
+  position: relative;
+}
+
+#artistBioSectionName {
+  margin: 0;
+  font-size: 2em;
+  margin-top: 0;
+}
+
+#artistBioP {
+  overflow: scroll;
+  font-size: 0.9em;
+  line-height: 2em;
+  margin: 0;
+  text-align: center;
+}
+
+#middleArtistImg {
+  background-image: url('../img/a3.png');
+  background-size: cover;
+  width: 26em;
+  z-index: 2;
+}
+
+#leftArtistImg,
+#rightArtistImg {
+  opacity: 0.4;
+  position: relative;
+  width: 20em;
+  z-index: 1;
+}
+
+#leftArtistImg {
+  background-image: url('../img/a1.png');
+  background-size: cover;
+}
+
+.leftArtistImg {
+  left: 4.4em;
+}
+
+#rightArtistImg {
+  background-image: url('../img/a2.png');
+  background-size: cover;
+}
+
+.rightArtistImg {
+  left: -4.4em;
+}
+
+/* <!-- STAFF PAGE --> */
+#staffPageTitle p {
+  font-weight: 300;
+  font-size: 2em;
+}
+
+#staffPage {
+  justify-content: flex-end;
+}
+
+#staffPageBottom {
+
+}
+
+#staffPageLeftSide {
+  overflow: scroll;
+  width: 36em;
+}
+
+#staffPageLeftSide::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+#staffPageLeftSide::-webkit-scrollbar-thumb {
+    background: #000
+}​
+
+#staffPageSection {
+}
+
+#staffPageSectionName p {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #000;
+  /* border-bottom: 0.01em solid var(--darkRed); */
+  padding: 0.4em;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.staffDescription {
+  height: 4em;
+  justify-content: space-between !important;
+}
+
+.staffDescription > div {
+  margin: 1em;
+}
+
+.staffDescription > *:first-child p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.staffDescriptionActive {
+  background-color: var(--darkRed);
+  color: #fff;
+}
+
+
+/* <!-- SERVICES PAGE --> && <!-- CONTACT --> */
+#servicesPageLeftSide,
+#contactPageRightSide {
+  background-color: var(--darkRed);
+  background: radial-gradient(#D1001B, #870012);
+  position: relative;
+  transition: top 1s;
+}
+
+#servicesPageLeftSide p,
+#contactPageRightSide p {
+  color: #000;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+#servicesPageLeftSide img {
+  height: 6em;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1em 12em;
+}
+
+.servicesPageLeftSide,
+.contactPageRightSide {
+  top: 0;
+}
+
+#servicesPageRightSide .heading,
+#contactPageLeftSide .heading {
+  font-size: 4em;
+  font-weight: 100;
+}
+
+#servicesPageRightSide,
+#contactPageLeftSide {
+  align-items: flex-start;
+}
+
+#servicesPageRightSide > * ,
+#contactPageLeftSide > * {
+  margin-left: 6rem;
+}
+
+#servicesPageRightSide .list,
+#contactPageLeftSide .list {
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+#buildat {
+  color: #000;
+  text-decoration: none;
+}
+
+#buildat a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#buildat a span {
+  opacity: 0.6;
+}
+
+.socialmedia a {
+  color: #fff;
+  font-size: 3.2em;
+  margin: 0 0.25em;
+  opacity: 0.4;
+}
+
+#contactPageRightSide p#copywrite {
+  font-size: 1em;
+  margin: 0;
+  margin-top: 4em;
+  opacity: 0.4;
+}

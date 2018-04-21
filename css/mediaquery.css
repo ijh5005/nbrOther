@@ -1,0 +1,117 @@
+@media (max-width: 1530px) {
+  #migh,
+  #ty {
+    font-size: 19em;
+  }
+}
+
+@media (max-width: 1350px) {
+  #migh,
+  #ty {
+    font-size: 14em;
+  }
+}
+
+@media (max-width: 1050px) {
+  #migh,
+  #ty,
+  #featuredArtist,
+  #topBar,
+  #audioPlayer,
+  .paddingSongs,
+  #aboutImg {
+    display: none;
+  }
+
+  #playlist {
+    width: 100vw;
+  }
+
+  #playlistHolder {
+    width: 100vw;
+  }
+
+  #playlistSectionHolder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #playlist {
+    justify-content: flex-start;
+  }
+
+  #playlistHolder {
+    height: 100%;
+  }
+
+  .itunesLogo {
+    left: 0;
+    top: 1em;
+  }
+
+  #playlistSection {
+    height: 100vh;
+    font-size: 2.4em;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  #aboutPage,
+  #artistPage,
+  #servicesPage,
+  #contactPage {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  .aboutScreen {
+    top: 0;
+    background: transparent !important;
+    height: 100%;
+    width: 100%;
+  }
+
+  #aboutScreenText {
+    width: 100%;
+    left: 0;
+    font-size: 2em;
+  }
+
+  #aboutP {
+    width: 80%;
+  }
+
+  #aboutLogoBox {
+    width: 68%;
+    border-radius: 0%;
+  }
+
+  #artistImg {
+    height: 80%;
+  }
+
+  #slideShowContainer {
+    width: 100%;
+  }
+
+  #artistBioSectionName {
+    font-size: 6em;
+    margin: 0;
+  }
+  #artistBioP {
+    font-size: 2.4em;
+    width: 80%;
+  }
+  .slideItems {
+    width: 50%;
+  }
+}
